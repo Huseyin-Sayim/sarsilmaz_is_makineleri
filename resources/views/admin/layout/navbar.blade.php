@@ -8,8 +8,8 @@
 
         <div class="navbar-brand flex-1 flex-lg-0">
             <a href="index.html" class="d-inline-flex align-items-center">
-                <img src="{{ asset('admin'). '/' }}images/logo_icon.svg" alt="">
-                <img src="{{ asset('admin'). '/' }}images/logo_text_light.svg" class="d-none d-sm-inline-block h-16px ms-3" alt="">
+                <img src="{{ asset('admin/images/logo_icon.svg')}}" alt="">
+                <img src="{{ asset('admin/images/logo_text_light.svg')}}" class="d-none d-sm-inline-block h-16px ms-3" alt="">
             </a>
         </div>
 
@@ -20,170 +20,6 @@
                 </a>
             </li>
 
-            <li class="nav-item nav-item-dropdown-lg dropdown">
-                <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded-pill" data-bs-toggle="dropdown">
-                    <i class="ph-squares-four"></i>
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-scrollable-sm wmin-lg-600 p-0">
-                    <div class="d-flex align-items-center border-bottom p-3">
-                        <h6 class="mb-0">Browse apps</h6>
-                        <a href="#" class="ms-auto">
-                            View all
-                            <i class="ph-arrow-circle-right ms-1"></i>
-                        </a>
-                    </div>
-
-                    <div class="row row-cols-1 row-cols-sm-2 g-0">
-                        <div class="col">
-                            <button type="button" class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom p-3">
-                                <div>
-                                    <img src="{{ asset('admin'). '/' }}images/demo/logos/1.svg" class="h-40px mb-2" alt="">
-                                    <div class="fw-semibold my-1">Customer data platform</div>
-                                    <div class="text-muted">Unify customer data from multiple sources</div>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="col">
-                            <button type="button" class="dropdown-item text-wrap h-100 align-items-start border-bottom p-3">
-                                <div>
-                                    <img src="{{ asset('admin'). '/' }}images/demo/logos/2.svg" class="h-40px mb-2" alt="">
-                                    <div class="fw-semibold my-1">Data catalog</div>
-                                    <div class="text-muted">Discover, inventory, and organize data admin</div>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="col">
-                            <button type="button" class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom border-bottom-sm-0 rounded-bottom-start p-3">
-                                <div>
-                                    <img src="{{ asset('admin'). '/' }}images/demo/logos/3.svg" class="h-40px mb-2" alt="">
-                                    <div class="fw-semibold my-1">Data governance</div>
-                                    <div class="text-muted">The collaboration hub and data marketplace</div>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="col">
-                            <button type="button" class="dropdown-item text-wrap h-100 align-items-start rounded-bottom-end p-3">
-                                <div>
-                                    <img src="{{ asset('admin'). '/' }}images/demo/logos/4.svg" class="h-40px mb-2" alt="">
-                                    <div class="fw-semibold my-1">Data privacy</div>
-                                    <div class="text-muted">Automated provisioning of non-production datasets</div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item nav-item-dropdown-lg dropdown ms-lg-2">
-                <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded-pill" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                    <i class="ph-chats"></i>
-                    <span class="badge bg-yellow text-black position-absolute top-0 end-0 translate-middle-top zindex-1 rounded-pill mt-1 me-1">8</span>
-                </a>
-
-                <div class="dropdown-menu wmin-lg-400 p-0">
-                    <div class="d-flex align-items-center p-3">
-                        <h6 class="mb-0">Messages</h6>
-                        <div class="ms-auto">
-                            <a href="#" class="text-body">
-                                <i class="ph-plus-circle"></i>
-                            </a>
-                            <a href="#search_messages" class="collapsed text-body ms-2" data-bs-toggle="collapse">
-                                <i class="ph-magnifying-glass"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="collapse" id="search_messages">
-                        <div class="px-3 mb-2">
-                            <div class="form-control-feedback form-control-feedback-start">
-                                <input type="text" class="form-control" placeholder="Search messages">
-                                <div class="form-control-feedback-icon">
-                                    <i class="ph-magnifying-glass"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown-menu-scrollable pb-2">
-                        <a href="#" class="dropdown-item align-items-start text-wrap py-2">
-                            <div class="status-indicator-container me-3">
-                                <img src="{{ asset('admin'). '/' }}images/demo/users/face10.jpg" class="w-40px h-40px rounded-pill" alt="">
-                                <span class="status-indicator bg-warning"></span>
-                            </div>
-
-                            <div class="flex-1">
-                                <span class="fw-semibold">James Alexander</span>
-                                <span class="text-muted float-end fs-sm">04:58</span>
-                                <div class="text-muted">who knows, maybe that would be the best thing for me...</div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="dropdown-item align-items-start text-wrap py-2">
-                            <div class="status-indicator-container me-3">
-                                <img src="{{ asset('admin'). '/' }}images/demo/users/face3.jpg" class="w-40px h-40px rounded-pill" alt="">
-                                <span class="status-indicator bg-success"></span>
-                            </div>
-
-                            <div class="flex-1">
-                                <span class="fw-semibold">Margo Baker</span>
-                                <span class="text-muted float-end fs-sm">12:16</span>
-                                <div class="text-muted">That was something he was unable to do because...</div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="dropdown-item align-items-start text-wrap py-2">
-                            <div class="status-indicator-container me-3">
-                                <img src="{{ asset('admin'). '/' }}images/demo/users/face24.jpg" class="w-40px h-40px rounded-pill" alt="">
-                                <span class="status-indicator bg-success"></span>
-                            </div>
-                            <div class="flex-1">
-                                <span class="fw-semibold">Jeremy Victorino</span>
-                                <span class="text-muted float-end fs-sm">22:48</span>
-                                <div class="text-muted">But that would be extremely strained and suspicious...</div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="dropdown-item align-items-start text-wrap py-2">
-                            <div class="status-indicator-container me-3">
-                                <img src="{{ asset('admin'). '/' }}images/demo/users/face4.jpg" class="w-40px h-40px rounded-pill" alt="">
-                                <span class="status-indicator bg-grey"></span>
-                            </div>
-                            <div class="flex-1">
-                                <span class="fw-semibold">Beatrix Diaz</span>
-                                <span class="text-muted float-end fs-sm">Tue</span>
-                                <div class="text-muted">What a strenuous career it is that I've chosen...</div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="dropdown-item align-items-start text-wrap py-2">
-                            <div class="status-indicator-container me-3">
-                                <img src="{{ asset('admin'). '/' }}images/demo/users/face25.jpg" class="w-40px h-40px rounded-pill" alt="">
-                                <span class="status-indicator bg-danger"></span>
-                            </div>
-                            <div class="flex-1">
-                                <span class="fw-semibold">Richard Vango</span>
-                                <span class="text-muted float-end fs-sm">Mon</span>
-                                <div class="text-muted">Other travelling salesmen live a life of luxury...</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="d-flex border-top py-2 px-3">
-                        <a href="#" class="text-body">
-                            <i class="ph-checks me-1"></i>
-                            Dismiss all
-                        </a>
-                        <a href="#" class="text-body ms-auto">
-                            View all
-                            <i class="ph-arrow-circle-right ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </li>
         </ul>
 
         <div class="navbar-collapse justify-content-center flex-lg-1 order-2 order-lg-1 collapse" id="navbar_search">
@@ -214,7 +50,7 @@
 
                             <div class="dropdown-item cursor-pointer">
                                 <div class="me-3">
-                                    <img src="{{ asset('admin'). '/' }}images/demo/users/face3.jpg" class="w-32px h-32px rounded-pill" alt="">
+                                    <img src="{{ asset('admin/images/demo/users/face3.jpg')}}" class="w-32px h-32px rounded-pill" alt="">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1">
@@ -231,7 +67,7 @@
 
                             <div class="dropdown-item cursor-pointer">
                                 <div class="me-3">
-                                    <img src="{{ asset('admin'). '/' }}images/demo/users/face24.jpg" class="w-32px h-32px rounded-pill" alt="">
+                                    <img src="{{ asset('admin/images/demo/users/face24.jpg')}}" class="w-32px h-32px rounded-pill" alt="">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1">
@@ -258,7 +94,7 @@
 
                             <div class="dropdown-item cursor-pointer">
                                 <div class="me-3">
-                                    <img src="{{ asset('admin'). '/' }}images/brands/adobe.svg" class="w-32px h-32px rounded-pill" alt="">
+                                    <img src="{{ asset('admin/images/brands/adobe.svg')}}" class="w-32px h-32px rounded-pill" alt="">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1">
@@ -275,7 +111,7 @@
 
                             <div class="dropdown-item cursor-pointer">
                                 <div class="me-3">
-                                    <img src="{{ asset('admin'). '/' }}images/brands/holiday-inn.svg" class="w-32px h-32px rounded-pill" alt="">
+                                    <img src="{{ asset('admin/images/brands/holiday-inn.svg')}}" class="w-32px h-32px rounded-pill" alt="">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1">
@@ -292,7 +128,7 @@
 
                             <div class="dropdown-item cursor-pointer">
                                 <div class="me-3">
-                                    <img src="{{ asset('admin'). '/' }}images/brands/ing.svg" class="w-32px h-32px rounded-pill" alt="">
+                                    <img src="{{ asset('admin/images/brands/ing.svg')}}" class="w-32px h-32px rounded-pill" alt="">
                                 </div>
 
                                 <div class="d-flex flex-column flex-grow-1">
@@ -397,24 +233,6 @@
                         <i class="ph-user-circle me-2"></i>
                         My profile
                     </a>
-                    <a href="#" class="dropdown-item">
-                        <i class="ph-currency-circle-dollar me-2"></i>
-                        My subscription
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        <i class="ph-shopping-cart me-2"></i>
-                        My orders
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        <i class="ph-envelope-open me-2"></i>
-                        My inbox
-                        <span class="badge bg-primary rounded-pill ms-auto">26</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="ph-gear me-2"></i>
-                        Account settings
-                    </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -434,7 +252,7 @@
     <div class="page-header-content d-lg-flex">
         <div class="d-flex">
             <div class="breadcrumb py-2">
-                <a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+                <a href="#" class="breadcrumb-item"><i class="ph-house"></i></a>
                 <a href="#" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-item active">Dashboard</span>
             </div>
@@ -498,7 +316,7 @@
             <div class="d-sm-flex align-items-center mb-3 mb-lg-0 ms-lg-3">
                 <div class="dropdown w-100 w-sm-auto">
                     <a href="#" class="d-flex align-items-center text-body lh-1 dropdown-toggle py-sm-2" data-bs-toggle="dropdown" data-bs-display="static">
-                        <img src="{{ asset('admin'). '/' }}images/brands/tesla.svg" class="w-32px h-32px me-2" alt="">
+                        <img src="{{ asset('admin/images/brands/tesla.svg')}}" class="w-32px h-32px me-2" alt="">
                         <div class="me-auto me-lg-1">
                             <div class="fs-sm text-muted mb-1">Customer</div>
                             <div class="fw-semibold">Tesla Motors Inc</div>
@@ -514,35 +332,35 @@
                             </a>
                         </div>
                         <a href="#" class="dropdown-item active py-2">
-                            <img src="{{ asset('admin'). '/' }}images/brands/tesla.svg" class="w-32px h-32px me-2" alt="">
+                            <img src="{{ asset('admin/images/brands/tesla.svg')}}" class="w-32px h-32px me-2" alt="">
                             <div>
                                 <div class="fw-semibold">Tesla Motors Inc</div>
                                 <div class="fs-sm text-muted">42 users</div>
                             </div>
                         </a>
                         <a href="#" class="dropdown-item py-2">
-                            <img src="{{ asset('admin'). '/' }}images/brands/debijenkorf.svg" class="w-32px h-32px me-2" alt="">
+                            <img src="{{ asset('admin/images/brands/debijenkorf.svg')}}" class="w-32px h-32px me-2" alt="">
                             <div>
                                 <div class="fw-semibold">De Bijenkorf</div>
                                 <div class="fs-sm text-muted">49 users</div>
                             </div>
                         </a>
                         <a href="#" class="dropdown-item py-2">
-                            <img src="{{ asset('admin'). '/' }}images/brands/klm.svg" class="w-32px h-32px me-2" alt="">
+                            <img src="{{ asset('admin/images/brands/klm.svg')}}" class="w-32px h-32px me-2" alt="">
                             <div>
                                 <div class="fw-semibold">Royal Dutch Airlines</div>
                                 <div class="fs-sm text-muted">18 users</div>
                             </div>
                         </a>
                         <a href="#" class="dropdown-item py-2">
-                            <img src="{{ asset('admin'). '/' }}images/brands/shell.svg" class="w-32px h-32px me-2" alt="">
+                            <img src="{{ asset('admin/images/brands/shell.svg')}}" class="w-32px h-32px me-2" alt="">
                             <div>
                                 <div class="fw-semibold">Royal Dutch Shell</div>
                                 <div class="fs-sm text-muted">54 users</div>
                             </div>
                         </a>
                         <a href="#" class="dropdown-item py-2">
-                            <img src="{{ asset('admin'). '/' }}images/brands/bp.svg" class="w-32px h-32px me-2" alt="">
+                            <img src="{{ asset('admin/images/brands/bp.svg')}}" class="w-32px h-32px me-2" alt="">
                             <div>
                                 <div class="fw-semibold">BP plc</div>
                                 <div class="fs-sm text-muted">23 users</div>
@@ -555,15 +373,15 @@
 
                 <div class="d-inline-flex mt-3 mt-sm-0">
                     <a href="#" class="status-indicator-container ms-1">
-                        <img src="{{ asset('admin'). '/' }}images/demo/users/face24.jpg" class="w-32px h-32px rounded-pill" alt="">
+                        <img src="{{ asset('admin/images/demo/users/face24.jpg')}}" class="w-32px h-32px rounded-pill" alt="">
                         <span class="status-indicator bg-warning"></span>
                     </a>
                     <a href="#" class="status-indicator-container ms-1">
-                        <img src="{{ asset('admin'). '/' }}images/demo/users/face1.jpg" class="w-32px h-32px rounded-pill" alt="">
+                        <img src="{{ asset('admin/images/demo/users/face1.jpg')}}" class="w-32px h-32px rounded-pill" alt="">
                         <span class="status-indicator bg-success"></span>
                     </a>
                     <a href="#" class="status-indicator-container ms-1">
-                        <img src="{{ asset('admin'). '/' }}images/demo/users/face3.jpg" class="w-32px h-32px rounded-pill" alt="">
+                        <img src="{{ asset('admin/images/demo/users/face3.jpg')}}" class="w-32px h-32px rounded-pill" alt="">
                         <span class="status-indicator bg-danger"></span>
                     </a>
                     <a href="#" class="btn btn-outline-primary btn-icon w-32px h-32px rounded-pill ms-3">

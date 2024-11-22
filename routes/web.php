@@ -10,7 +10,7 @@ Route::get('/', function () {
 Route::controller(AdminController::class)->group(function () {
     Route::get("/adminn", [AdminController::class, "index"]);
 
-//    Route::get("/admin/home", [AdminController::class, "index"]);
+    Route::get("/admin/home", [AdminController::class, "index"]);
 });
 
 Auth::routes();
