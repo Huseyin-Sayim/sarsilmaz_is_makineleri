@@ -7,10 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware("auth")->middleware("admin")->group(function () {
-    Route::get("/adminn", function () {
-        return view("admin.index");
-    });
+Route::controller(AdminController::class)->group(function () {
+    Route::get("/adminn", [AdminController::class, "index"]);
+
+//    Route::get("/admin/home", [AdminController::class, "index"]);
 });
 
 Auth::routes();

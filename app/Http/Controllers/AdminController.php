@@ -9,6 +9,10 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view("admin.index");
+        if (auth()->guest()) {
+            return view('auth.login');
+        } else {
+            return view("admin.index");
+        }
     }
 }
