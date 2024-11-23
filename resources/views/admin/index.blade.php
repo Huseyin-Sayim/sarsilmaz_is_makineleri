@@ -1,11 +1,7 @@
 @extends("admin.layout.app")
 
 @section("content")
-    <div class="page-content pt-0">
 
-        <!-- Main sidebar -->
-        @include("admin.layout.sidebar")
-        <!-- /main sidebar -->
 
 
         <!-- Main content -->
@@ -1930,5 +1926,5 @@
         </div>
         <!-- /main content -->
 
-    </div>
+
 @endsection
