@@ -7,12 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller(AdminController::class)->group(function () {
-    Route::get("/adminn", [AdminController::class, "index"]);
-
-    Route::get("/admin/home", [AdminController::class, "index"]);
-});
-
 Auth::routes();
+
+Route::middleware("auth")->group(function () {
+    Route::get("/adminn", [AdminController::class, "index"]);
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
