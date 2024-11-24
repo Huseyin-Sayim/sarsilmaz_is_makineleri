@@ -7,7 +7,7 @@
             <div class="content">
 
                 <div class="mb-4 w-75 m-auto">
-                    <form action="{{ route("gallery.store") }}" method="post">
+                    <form action="{{ route("gallery.store") }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="fw-bold pb-2 mb-3"></div>
 
@@ -18,7 +18,7 @@
                                                 <span class="input-group-text text-primary">
                                                     <i class="ph ph-text-h-one"></i>
                                                 </span>
-                                    <input type="text" name="media_title" class="form-control" placeholder="Input placeholder">
+                                    <input type="text" name="media_title" class="form-control" placeholder="Başlık Giriniz" required>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                                 <span class="input-group-text  bg-input">
                                                     <i class="ph ph-text-aa"></i>
                                                 </span>
-                                    <textarea class="form-control" name="media_description" placeholder="Açıklama Giriniz"></textarea>
+                                    <textarea class="form-control" name="media_description" placeholder="Açıklama Giriniz" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                                                 <span class="input-group-text bg-input text-primary">
                                                     <i class="ph-user-circle"></i>
                                                 </span>
-                                    <input type="file" name="media" class="form-control" placeholder="Fotoğraf Yükleyin">
+                                    <input type="file" name="media" class="form-control" placeholder="Fotoğraf Yükleyin" required>
                                 </div>
                             </div>
                         </div>
@@ -50,6 +50,15 @@
                     </form>
                 </div>
 
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-5">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
 

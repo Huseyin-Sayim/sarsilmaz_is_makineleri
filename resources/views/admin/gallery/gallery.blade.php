@@ -6,225 +6,166 @@
 
         <!-- Media library -->
         <div class="card">
-                    <div class="card-header">
+                    <div class="card-header d-flex justify-content-between">
                         <h6 class="mb-0">Galeri</h6>
+                        <a href="{{ route("gallery.create") }}" class="btn btn-primary float-end">Yeni Fotoğraf Ekle</a>
                     </div>
 
                     <table class="table media-library">
                         <thead>
                             <tr>
-                                <th>
-                                    <input type="checkbox" class="form-check-input">
-                                </th>
-                                <th>Preview</th>
-                                <th>Name</th>
-                                <th>Author</th>
-                                <th>Date</th>
-                                <th>File info</th>
+                                <th>#</th>
+                                <th>Fotoğraf</th>
+                                <th>Başlık</th>
+                                <th>Açıklama</th>
+                                <th>Tür</th>
+                                <th>Durum</th>
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>
-                                <input type="checkbox" class="form-check-input">
-                            </td>
-                            <td>
-                                <a href="../../../assets/images/demo/flat/1.png" data-bs-popup="lightbox">
-                                    <img src="../../../assets/images/demo/flat/1.png" alt="" class="img-preview rounded">
-                                </a>
-                            </td>
-                            <td><a href="#">Ignorant saw her drawings</a></td>
-                            <td><a href="#">Eugene Kopyov</a></td>
-                            <td>Jun 10, 2015</td>
-                            <td>
-                                <ul class="list-unstyled mb-0">
-                                    <li><span class="fw-semibold">Size:</span> 215 Kb</li>
-                                    <li><span class="fw-semibold">Format:</span> .jpg</li>
-                                </ul>
-                            </td>
-                            <td class="text-center">
-                                <div class="d-inline-flex">
-                                    <div class="dropdown">
-                                        <a href="#" class="text-body" data-bs-toggle="dropdown">
-                                            <i class="ph-list"></i>
-                                        </a>
+                        @foreach($gallery as $image)
+                            <tr>
+                                <td>
+                                    {{ $image->id }}
+                                </td>
+                                <td>
+                                    <a href="{{asset($image->media_url)}}" data-bs-popup="lightbox">
+                                        <img src="{{asset($image->media_url)}}" alt="" class="img-preview rounded">
+                                    </a>
+                                </td>
+                                <td>{{ $image->media_title }}</td>
+                                <td>{{ $image->media_description }}</td>
+                                <td>{{ $image->media_type }}</td>
+                                <td>
+                                    @if($image->media_status == 1)
+                                        {{ 'Aktif' }}
+                                    @else
+                                        {{ 'Pasif' }}
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-inline-flex">
+                                        <div class="dropdown">
+                                            <a href="#" class="text-body" data-bs-toggle="dropdown">
+                                                <i class="ph-list"></i>
+                                            </a>
 
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-pencil me-2"></i>
-                                                Edit file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-copy me-2"></i>
-                                                Copy file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-eye-slash me-2"></i>
-                                                Unpublish
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-trash me-2"></i>
-                                                Move to trash
-                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="{{ route("gallery.edit", [$image->id]) }}" class="dropdown-item">
+                                                    <i class="ph-pencil me-2"></i>
+                                                    Düzenle
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="{{ route("gallery.delete", [$image->id]) }}" class="dropdown-item">
+                                                    <i class="ph-trash me-2"></i>
+                                                    Sil
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox" class="form-check-input">
-                            </td>
-                            <td>
-                                <a href="../../../assets/images/demo/flat/2.png" data-bs-popup="lightbox">
-                                    <img src="../../../assets/images/demo/flat/2.png" alt="" class="img-preview rounded">
-                                </a>
-                            </td>
-                            <td><a href="#">Case oh an that or away sigh</a></td>
-                            <td><a href="#">James Alexander</a></td>
-                            <td>Jun 9, 2015</td>
-                            <td>
-                                <ul class="list-unstyled mb-0">
-                                    <li><span class="fw-semibold">Size:</span> 636 Kb</li>
-                                    <li><span class="fw-semibold">Format:</span> .png</li>
-                                </ul>
-                            </td>
-                            <td class="text-center">
-                                <div class="d-inline-flex">
-                                    <div class="dropdown">
-                                        <a href="#" class="text-body" data-bs-toggle="dropdown">
-                                            <i class="ph-list"></i>
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-pencil me-2"></i>
-                                                Edit file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-copy me-2"></i>
-                                                Copy file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-eye-slash me-2"></i>
-                                                Unpublish
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-trash me-2"></i>
-                                                Move to trash
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox" class="form-check-input">
-                            </td>
-                            <td>
-                                <a href="../../../assets/images/demo/flat/3.png" data-bs-popup="lightbox">
-                                    <img src="../../../assets/images/demo/flat/3.png" alt="" class="img-preview rounded">
-                                </a>
-                            </td>
-                            <td><a href="#">Acuteness you exquisite ourselves</a></td>
-                            <td><a href="#">Jeremy Victorino</a></td>
-                            <td>Jun 9, 2015</td>
-                            <td>
-                                <ul class="list-unstyled mb-0">
-                                    <li><span class="fw-semibold">Size:</span> 295 Kb</li>
-                                    <li><span class="fw-semibold">Format:</span> .png</li>
-                                </ul>
-                            </td>
-                            <td class="text-center">
-                                <div class="d-inline-flex">
-                                    <div class="dropdown">
-                                        <a href="#" class="text-body" data-bs-toggle="dropdown">
-                                            <i class="ph-list"></i>
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-pencil me-2"></i>
-                                                Edit file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-copy me-2"></i>
-                                                Copy file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-eye-slash me-2"></i>
-                                                Unpublish
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-trash me-2"></i>
-                                                Move to trash
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <input type="checkbox" class="form-check-input">
-                            </td>
-                            <td>
-                                <a href="../../../assets/images/demo/flat/4.png" data-bs-popup="lightbox">
-                                    <img src="../../../assets/images/demo/flat/4.png" alt="" class="img-preview rounded">
-                                </a>
-                            </td>
-                            <td><a href="#">Enquire ye without it garrets</a></td>
-                            <td><a href="#">Margo Baker</a></td>
-                            <td>Jun 8, 2015</td>
-                            <td>
-                                <ul class="list-unstyled mb-0">
-                                    <li><span class="fw-semibold">Size:</span> 593 Kb</li>
-                                    <li><span class="fw-semibold">Format:</span> .png</li>
-                                </ul>
-                            </td>
-                            <td class="text-center">
-                                <div class="d-inline-flex">
-                                    <div class="dropdown">
-                                        <a href="#" class="text-body" data-bs-toggle="dropdown">
-                                            <i class="ph-list"></i>
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-pencil me-2"></i>
-                                                Edit file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-copy me-2"></i>
-                                                Copy file
-                                            </a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-eye-slash me-2"></i>
-                                                Unpublish
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="ph-trash me-2"></i>
-                                                Move to trash
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
-        <!-- /media library -->
+
+            <!-- /media library -->
+
+        <!-- <========== This section will be edit again later =============> -->
+
+        @if(\Illuminate\Support\Facades\Session::has("added_gallery"))
+            @if(\Illuminate\Support\Facades\Session::get("added_gallery") == "success")
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Başarıyla eklendi",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                  \Illuminate\Support\Facades\Session::remove("added_gallery");
+                @endphp
+            @else
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "Error",
+                        title: "Ekleme Başarısız",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                    \Illuminate\Support\Facades\Session::remove("added_gallery");
+                @endphp
+            @endif
+        @endif
+
+        @if(\Illuminate\Support\Facades\Session::has("update_gallery"))
+            @if(\Illuminate\Support\Facades\Session::get("update_gallery") == "success")
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Başarıyla Güncellendi",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                  \Illuminate\Support\Facades\Session::remove("update_gallery");
+                @endphp
+            @else
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Güncelleme Hatası",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                    \Illuminate\Support\Facades\Session::remove("update_gallery");
+                @endphp
+            @endif
+        @endif
+
+        @if(\Illuminate\Support\Facades\Session::has("delete_gallery"))
+            @if(\Illuminate\Support\Facades\Session::get("delete_gallery") == 'success')
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Başarıyla Silindi",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                    \Illuminate\Support\Facades\Session::remove("delete_gallery");
+                @endphp
+            @else
+                <script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Beklenmedik bir hata oluştu",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+                @php
+                    \Illuminate\Support\Facades\Session::remove("delete_gallery");
+                @endphp
+            @endif
+        @endif
+
+        <!-- <=======================================================> -->
 
     </div>
     <!-- /main content -->

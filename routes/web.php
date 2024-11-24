@@ -12,9 +12,14 @@ Auth::routes();
 
 Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('admin.home');
-    Route::get("/gallery", [GalleryController::class, "index"])->name("gallery");
-    Route::get("/gallery_create", [GalleryController::class, "create"])->name("gallery.create");
-    Route::post("gallery_store", [GalleryController::class, "store"])->name("gallery.store");
+    Route::prefix('gallery')->group(function () {
+        Route::get("/", [GalleryController::class, "index"])->name("gallery");
+        Route::get("/create", [GalleryController::class, "create"])->name("gallery.create");
+        Route::post("store", [GalleryController::class, "store"])->name("gallery.store");
+        Route::get("/edit/{id}", [GalleryController::class, "edit"])->name("gallery.edit");
+        Route::post("/update/{id}", [GalleryController::class, "update"])->name("gallery.update");
+        Route::get("/delete/{id}", [GalleryController::class, "delete"])->name("gallery.delete");
+    });
 });
 
 //<<<<<<< HEAD

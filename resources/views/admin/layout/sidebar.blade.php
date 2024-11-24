@@ -32,28 +32,18 @@
                     <i class="ph-dots-three sidebar-resize-show"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">
+                    <a href="{{ route("admin.home") }}" class="nav-link @if($title == 'Anasayfa') {{ 'active' }} @endif ">
                         <i class="ph-house"></i>
                         <span>
-									Dashboard
-									<span class="d-block fw-normal text-body opacity-50">No pending orders</span>
-								</span>
+                            {{ "Anasayfa" }}
+                        </span>
                     </a>
                 </li>
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link">
+                <li class="nav-item nav-item">
+                    <a href="{{ route("gallery") }}" class="nav-link @if($title == 'Galeri') {{ 'active' }} @endif">
                         <i class="ph-layout"></i>
-                        <span>Layouts</span>
+                        <span>{{ 'Galeri'  }}</span>
                     </a>
-                    <ul class="nav-group-sub collapse" data-submenu-title="Layouts">
-                        <li class="nav-item"><a href="../../layout_1/full/index.html" class="nav-link">Default layout</a></li>
-                        <li class="nav-item"><a href="../../layout_2/full/index.html" class="nav-link">Layout 2</a></li>
-                        <li class="nav-item"><a href="index.html" class="nav-link active">Layout 3</a></li>
-                        <li class="nav-item"><a href="../../layout_4/full/index.html" class="nav-link">Layout 4</a></li>
-                        <li class="nav-item"><a href="../../layout_5/full/index.html" class="nav-link">Layout 5</a></li>
-                        <li class="nav-item"><a href="../../layout_6/full/index.html" class="nav-link">Layout 6</a></li>
-                        <li class="nav-item"><a href="../../layout_7/full/index.html" class="nav-link disabled">Layout 7 <span class="opacity-75 fs-sm ms-auto">Coming soon</span></a></li>
-                    </ul>
                 </li>
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link">

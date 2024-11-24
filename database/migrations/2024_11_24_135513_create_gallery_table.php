@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text("media_description");
             $table->string("media_url");
             $table->string("media_type");
-            $table->boolean("media_status");
+            $table->boolean("media_status")->default("1");
             $table->timestamps();
         });
     }
@@ -30,3 +30,4 @@ return new class extends Migration
         Schema::dropIfExists('gallery');
     }
 };
+
