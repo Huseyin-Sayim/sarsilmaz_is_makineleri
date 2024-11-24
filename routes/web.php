@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,12 +10,19 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware("auth")->group(function () {
-    Route::get("/adminn", [AdminController::class, "index"]);
+Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
+    Route::get('/', [AdminHomeController::class, 'index'])->name('admin.home');
+    Route::get("/gallery", [GalleryController::class, "index"])->name("gallery");
+    Route::get("/gallery_create", [GalleryController::class, "create"])->name("gallery.create");
+    Route::post("gallery_store", [GalleryController::class, "store"])->name("gallery.store");
 });
 
-Route::get("/gallery", function () {
-    return view("admin.gallery.create_gallery");
-});
+//<<<<<<< HEAD
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//=======
+
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+//>>>>>>> 0e16e20bdb6186c0565783fd9be17796317ddcb8

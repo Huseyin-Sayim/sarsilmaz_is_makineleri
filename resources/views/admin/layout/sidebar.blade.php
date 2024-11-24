@@ -6,7 +6,7 @@
         <!-- Sidebar header -->
         <div class="sidebar-section">
             <div class="sidebar-section-body d-flex justify-content-center">
-                <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Navigation</h5>
+                <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Menü</h5>
 
                 <div>
                     <button type="button" class="btn btn-light btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
@@ -262,3 +262,23 @@
     <!-- /sidebar content -->
 
 </div>
+
+<div class="content-wrapper">
+
+
+    <!-- Page header -->
+    <div class="page-header page-header-light shadow mb-2">
+        <div class="page-header-content d-lg-flex">
+            <div class="d-flex">
+                <h4 class="page-title mb-0">
+                    {{ $title }}  @if($sub_title == "") {{ "" }} @else {{ " - " }}@endif <span class="fw-normal">{{ $sub_title }}</span>
+                </h4>
+
+                <a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+                    <i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+

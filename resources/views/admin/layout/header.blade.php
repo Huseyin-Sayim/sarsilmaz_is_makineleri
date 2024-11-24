@@ -20,8 +20,12 @@
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
+    <script src="{{ asset('admin/js/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/js/vendor/media/glightbox.min.js') }}"></script>
     <script src="{{ asset('admin/js/vendor/visualization/d3/d3.min.js')}}"></script>
     <script src="{{ asset('admin/js/vendor/visualization/d3/d3_tooltip.js')}}"></script>
+    <script src="{{ asset('admin/js/vendor/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('admin/demo/pages/gallery_library.js') }}"></script>
 
     <script src="{{ asset('admin/js/app.js')}}"></script>
     <script src="{{ asset('admin/demo/pages/dashboard.js')}}"></script>

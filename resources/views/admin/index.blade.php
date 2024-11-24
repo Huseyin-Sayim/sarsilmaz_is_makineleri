@@ -1,17 +1,10 @@
+
 @extends("admin.layout.app")
 
 @section("content")
 
-
-
-        <!-- Main content -->
-        <div class="content-wrapper">
-
-            <!-- Content area -->
-            <div class="content">
-
-                <!-- Main charts -->
-                <div class="row">
+    <!-- Main charts -->
+    <div class="row">
                     <div class="col-xl-7">
 
                         <!-- Traffic sources -->
@@ -123,11 +116,10 @@
 
                     </div>
                 </div>
-                <!-- /main charts -->
+    <!-- /main charts -->
 
-
-                <!-- Dashboard content -->
-                <div class="row">
+    <!-- Dashboard content -->
+    <div class="row">
                     <div class="col-xl-8">
 
                         <!-- Marketing campaigns -->
@@ -1918,13 +1910,8 @@
 
                     </div>
                 </div>
-                <!-- /dashboard content -->
+    <!-- /dashboard content -->
 
-            </div>
-            <!-- /content area -->
-
-        </div>
-        <!-- /main content -->
 
 
 @endsection
