@@ -57,7 +57,7 @@
                                                     Düzenle
                                                 </a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="{{ route("gallery.delete", [$image->id]) }}" class="dropdown-item">
+                                                <a href="{{ route("gallery.delete", [$image->id]) }}" class="dropdown-item delete">
                                                     <i class="ph-trash me-2"></i>
                                                     Sil
                                                 </a>
@@ -73,7 +73,24 @@
 
             <!-- /media library -->
 
-        <!-- <========== This section will be edit again later =============> -->
+            <!-- Modal -->
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Bu ögeyi silmek istediğinize emin misiniz ?</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Hayır</button>
+                            <button type="button" class="btn btn-primary" id="confirm">Evet</button>
+                            <!-- <a href="" class="btn btn-danger" id="confirm"></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Modal -->
+
+            <!-- <========== This section will be edit again later =============> -->
 
         @if(\Illuminate\Support\Facades\Session::has("added_gallery"))
             @if(\Illuminate\Support\Facades\Session::get("added_gallery") == "success")
@@ -166,6 +183,20 @@
         @endif
 
         <!-- <=======================================================> -->
+
+    <script>
+        $('.delete').click((e) => {
+            e.preventDefault();
+            $('.modal').show();
+            let element = e.target.getAttribute('href');
+            $('#confirm').click(() => {
+                window.location.href = element;
+            });
+            $('#close').click(() => {
+                $('.modal').hide();
+            })
+        });
+    </script>
 
     </div>
     <!-- /main content -->
