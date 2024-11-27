@@ -45,17 +45,13 @@
                         <span>{{ 'Galeri'  }}</span>
                     </a>
                 </li>
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link">
-                        <i class="ph-swatches"></i>
-                        <span>Themes</span>
+                <li class="nav-item nav-item">
+                    <a href="{{ route("blog") }}" class="nav-link @if($title == 'Blog') {{ 'active' }} @endif">
+                        <i class="ph ph-text-align-center"></i>
+                        <span>{{ 'Blog'  }}</span>
                     </a>
-                    <ul class="nav-group-sub collapse" data-submenu-title="Themes">
-                        <li class="nav-item"><a href="index.html" class="nav-link active">Default</a></li>
-                        <li class="nav-item"><a href="../../../LTR/material/full/index.html" class="nav-link disabled">Material <span class="opacity-75 fs-sm ms-auto">Coming soon</span></a></li>
-                        <li class="nav-item"><a href="../../../LTR/clean/full/index.html" class="nav-link disabled">Clean <span class="opacity-75 fs-sm ms-auto">Coming soon</span></a></li>
-                    </ul>
                 </li>
+
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link">
                         <i class="ph-note-blank"></i>

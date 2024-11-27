@@ -6,12 +6,12 @@
 
         <!-- Media library -->
         <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <h6 class="mb-0">Galeri</h6>
-                        <a href="{{ route("gallery.create") }}" class="btn btn-primary float-end">Yeni Fotoğraf Ekle</a>
-                    </div>
+            <div class="card-header d-flex justify-content-between">
+                <h6 class="mb-0">Galeri</h6>
+                <a href="{{ route("gallery.create") }}" class="btn btn-primary float-end">Yeni Fotoğraf Ekle</a>
+            </div>
 
-                    <table class="table media-library">
+            <table class="table media-library">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -68,8 +68,8 @@
                             </tr>
                         @endforeach
                         </tbody>
-                    </table>
-                </div>
+                    </table
+        </div>
 
             <!-- /media library -->
 

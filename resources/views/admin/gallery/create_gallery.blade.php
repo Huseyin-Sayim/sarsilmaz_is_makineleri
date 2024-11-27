@@ -40,7 +40,7 @@
                             <div class="col-lg-9">
                                 <div class="input-group">
                                                 <span class="input-group-text bg-input text-primary">
-                                                    <i class="ph-user-circle"></i>
+                                                    <i class="ph ph-image"></i>
                                                 </span>
                                     <input type="file" name="media" class="form-control" placeholder="Fotoğraf Yükleyin" required>
                                 </div>

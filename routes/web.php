@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\BlogController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,6 +20,15 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
         Route::get("/edit/{id}", [GalleryController::class, "edit"])->name("gallery.edit");
         Route::post("/update/{id}", [GalleryController::class, "update"])->name("gallery.update");
         Route::get("/delete/{id}", [GalleryController::class, "delete"])->name("gallery.delete");
+    });
+
+    Route::prefix("blog")->group(function () {
+        Route::get("/", [BlogController::class, "index"])->name("blog");
+        Route::get("/create", [BlogController::class, "create"])->name("blog.create");
+        Route::post("/create", [BlogController::class, "store"])->name("blog.store");
+        Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+        Route::post('/update/{id}', [BlogController::class, 'update'])->name('blog.update');
+        Route::get('/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');
     });
 });
 

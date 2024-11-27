@@ -11,12 +11,15 @@
     <link href="{{ asset('admin/icons/phosphor/styles.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/ltr/all.min.css')}}" id="stylesheet" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/icons/fontawesome/fontawesome_all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/modal.css') }}" rel="stylesheet" type="text/css">
 
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
     <script src="{{ asset('admin/demo/demo_configurator.js')}}"></script>
     <script src="{{ asset('admin/js/bootstrap/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset("admin/demo/pages/components_modals.js") }}"></script>
+    <script src="{{ asset("admin/js/vendor/notifications/bootbox.min.js") }}"></script>
     <!-- /core JS files -->
 
 {{--    <!-- SweetAlert2 -->--}}
