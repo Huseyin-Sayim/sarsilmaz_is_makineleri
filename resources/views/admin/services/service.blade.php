@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between">
             <h6 class="mb-0">Blog</h6>
-            <a href="{{ route("blog.create") }}" class="btn btn-primary float-end">Yeni Blog Ekle</a>
+            <a href="{{ route("service.create") }}" class="btn btn-primary float-end">Yeni Hizmet Ekle</a>
         </div>
         <table class="table media-library">
             <thead>
@@ -12,14 +12,14 @@
                 <th>#</th>
                 <th>Fotoğraf</th>
                 <th>Başlık</th>
-                <th>Metin</th>
-                <th></th>
+                <th>Ön Bilgi</th>
+                <th>Açıklama</th>
                 <th></th>
                 <th class="text-center">Actions</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($blogs as $item)
+            @foreach($services as $item)
                 <tr>
                     <td>
                         {{ $item->id }}
@@ -29,9 +29,9 @@
                             <img src="{{ asset($item->media_url) }}" alt="" class="img-preview rounded">
                         </a>
                     </td>
-                    <td>{{ $item->blog_title }}</td>
-                    <td>{{ $item->blog_text }}</td>
-                    <td></td>
+                    <td>{{ $item->service_title }}</td>
+                    <td>{{ $item->service_intro_text }}</td>
+                    <td>{{ $item->service_description }}</td>
                     <td></td>
                     <td class="text-center">
                         <div class="d-inline-flex">
@@ -41,12 +41,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="{{ route('blog.edit', ["$item->id"]) }}" class="dropdown-item">
+                                    <a href="{{ route('service.edit', ["$item->id"]) }}" class="dropdown-item">
                                         <i class="ph-pencil me-2"></i>
                                         Düzenle
                                     </a>
                                     <div class="dropdown-divider"></div>
-                                    <a href="{{ route('blog.delete', [$item->id]) }}" class="dropdown-item delete">
+                                    <a href="{{ route('service.delete', [$item->id]) }}" class="dropdown-item delete">
                                         <i class="ph-trash me-2"></i>
                                         Sil
                                     </a>
@@ -59,8 +59,6 @@
             </tbody>
         </table>
     </div>
-
-    <!-- /media library -->
 
     <!-- Modal -->
     <div class="modal" tabindex="-1">
@@ -79,10 +77,9 @@
     </div>
     <!-- /Modal -->
 
-    <!-- <========== This section will be edit again later =============> -->
 
-    @if(\Illuminate\Support\Facades\Session::has("added_blog"))
-        @if(\Illuminate\Support\Facades\Session::get("added_blog") == "success")
+    @if(\Illuminate\Support\Facades\Session::has("add_service"))
+        @if(\Illuminate\Support\Facades\Session::get("add_service") == "success")
             <script>
                 Swal.fire({
                     position: "top-end",
@@ -93,7 +90,7 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("added_blog");
+                \Illuminate\Support\Facades\Session::remove("add_service");
             @endphp
         @else
             <script>
@@ -106,13 +103,13 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("added_blog");
+                \Illuminate\Support\Facades\Session::remove("add_service");
             @endphp
         @endif
     @endif
 
-    @if(\Illuminate\Support\Facades\Session::has("blog_edit"))
-        @if(\Illuminate\Support\Facades\Session::get("blog_edit") == "success")
+    @if(\Illuminate\Support\Facades\Session::has("update_service"))
+        @if(\Illuminate\Support\Facades\Session::get("update_service") == "success")
             <script>
                 Swal.fire({
                     position: "top-end",
@@ -123,7 +120,7 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("blog_edit");
+                \Illuminate\Support\Facades\Session::remove("update_service");
             @endphp
         @else
             <script>
@@ -136,13 +133,13 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("blog_edit");
+                \Illuminate\Support\Facades\Session::remove("update_service");
             @endphp
         @endif
     @endif
 
-    @if(\Illuminate\Support\Facades\Session::has("blog_delete"))
-        @if(\Illuminate\Support\Facades\Session::get("blog_delete") == 'success')
+    @if(\Illuminate\Support\Facades\Session::has("delete_service"))
+        @if(\Illuminate\Support\Facades\Session::get("delete_service") == 'success')
             <script>
                 Swal.fire({
                     position: "top-end",
@@ -153,7 +150,7 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("blog_delete");
+                \Illuminate\Support\Facades\Session::remove("delete_service");
             @endphp
         @else
             <script>
@@ -166,12 +163,10 @@
                 });
             </script>
             @php
-                \Illuminate\Support\Facades\Session::remove("blog_delete");
+                \Illuminate\Support\Facades\Session::remove("delete_service");
             @endphp
         @endif
     @endif
-
-    <!-- <=======================================================> -->
 
     <!-- Modal Script Codes -->
     <script>
@@ -189,5 +184,4 @@
     </script>
     <!-- /Modal Script Codes -->
 
-    </div>
 @endsection

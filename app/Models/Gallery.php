@@ -12,4 +12,9 @@ class Gallery extends Model
     {
         return $this->belongsTo(Blog::class, 'blog_image');
     }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class, "service_image");
+    }
 }

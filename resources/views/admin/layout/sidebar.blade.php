@@ -39,12 +39,14 @@
                         </span>
                     </a>
                 </li>
+
                 <li class="nav-item nav-item">
                     <a href="{{ route("gallery") }}" class="nav-link @if($title == 'Galeri') {{ 'active' }} @endif">
                         <i class="ph-layout"></i>
                         <span>{{ 'Galeri'  }}</span>
                     </a>
                 </li>
+
                 <li class="nav-item nav-item">
                     <a href="{{ route("blog") }}" class="nav-link @if($title == 'Blog') {{ 'active' }} @endif">
                         <i class="ph ph-text-align-center"></i>
@@ -52,27 +54,14 @@
                     </a>
                 </li>
 
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link">
-                        <i class="ph-note-blank"></i>
-                        <span>Starter kit</span>
+                <li class="nav-item nav-item">
+                    <a href="{{ route("service") }}" class="nav-link @if($title == 'Hizmetler') {{ 'active' }} @endif">
+                        <i class="ph-light ph-wrench"></i>
+                        <span>{{ 'Hizmetler'  }}</span>
                     </a>
-                    <ul class="nav-group-sub collapse" data-submenu-title="Starter kit">
-                        <li class="nav-item"><a href="../seed/layout_navbar_fixed.html" class="nav-link">Fixed navbar</a></li>
-                        <li class="nav-item"><a href="../seed/layout_navbar_hideable.html" class="nav-link">Hideable navbar</a></li>
-                        <li class="nav-item-divider"></li>
-                        <li class="nav-item"><a href="../seed/layout_no_header.html" class="nav-link">No header</a></li>
-                        <li class="nav-item"><a href="../seed/layout_no_footer.html" class="nav-link">No footer</a></li>
-                        <li class="nav-item"><a href="../seed/layout_fixed_footer.html" class="nav-link">Fixed footer</a></li>
-                        <li class="nav-item-divider"></li>
-                        <li class="nav-item"><a href="../seed/layout_2_sidebars_1_side.html" class="nav-link">2 sidebars on 1 side</a></li>
-                        <li class="nav-item"><a href="../seed/layout_2_sidebars_2_sides.html" class="nav-link">2 sidebars on 2 sides</a></li>
-                        <li class="nav-item"><a href="../seed/layout_3_sidebars.html" class="nav-link">3 sidebars</a></li>
-                        <li class="nav-item-divider"></li>
-                        <li class="nav-item"><a href="../seed/layout_boxed_page.html" class="nav-link">Boxed page</a></li>
-                        <li class="nav-item"><a href="../seed/layout_boxed_content.html" class="nav-link">Boxed content</a></li>
-                    </ul>
                 </li>
+
+
                 <li class="nav-item">
                     <a href="../../../../docs/other_changelog.html" class="nav-link">
                         <i class="ph-list-numbers"></i>

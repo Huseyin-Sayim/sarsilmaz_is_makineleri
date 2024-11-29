@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\BlogController;
+use App\Http\Controllers\admin\ServiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +30,15 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
         Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
         Route::post('/update/{id}', [BlogController::class, 'update'])->name('blog.update');
         Route::get('/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');
+    });
+
+    Route::prefix("service")->group(function () {
+        Route::get("/", [ServiceController::class, "index"])->name("service");
+        Route::get("/create", [ServiceController::class, "create"])->name("service.create");
+        Route::post("/create", [ServiceController::class, "store"])->name("service.store");
+        Route::get("/edit/{id}", [ServiceController::class, "edit"])->name("service.edit");
+        Route::post("/edit/{id}", [ServiceController::class, "update"])->name("service.update");
+        Route::get("/delete/{id}", [ServiceController::class, "delete"])->name("service.delete");
     });
 });
 

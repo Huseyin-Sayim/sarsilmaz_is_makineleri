@@ -22,11 +22,6 @@
     <script src="{{ asset("admin/js/vendor/notifications/bootbox.min.js") }}"></script>
     <!-- /core JS files -->
 
-{{--    <!-- SweetAlert2 -->--}}
-{{--    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js" integrity="sha256-1m4qVbsdcSU19tulVTbeQReg0BjZiW6yGffnlr/NJu4=" crossorigin="anonymous"></script>--}}
-{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" integrity="sha256-qWVM38RAVYHA4W8TAlDdszO1hRaAq0ME7y2e9aab354=" crossorigin="anonymous">--}}
-{{--    <!-- /SweetAlert2 -->--}}
-
     <!-- Theme JS files -->
     <script src="{{ asset('admin/js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/js/vendor/media/glightbox.min.js') }}"></script>
