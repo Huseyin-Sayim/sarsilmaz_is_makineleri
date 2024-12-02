@@ -10,3 +10,7 @@
 .blog_image:active {
     transform: scale(0.95);
 }
+
+.ck-editor.ck-reset.ck-rounded-corners {
+    width: 100%;
+}

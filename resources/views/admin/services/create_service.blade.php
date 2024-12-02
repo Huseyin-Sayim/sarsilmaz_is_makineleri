@@ -39,10 +39,7 @@
                         <label class="col-form-label col-lg-3">Hizmet Açıklaması</label>
                         <div class="col-lg-9">
                             <div class="input-group">
-                                <span class="input-group-text  bg-input">
-                                    <i class="ph ph-text-aa"></i>
-                                </span>
-                                <textarea class="form-control" name="service_description" placeholder="Hizmet Açıklaması Giriniz" required></textarea>
+                                <textarea class="form-control" id="ckeditor_classic_prefilled" name="service_description" placeholder="Hizmet Açıklaması Giriniz" required>&lt;p&gt; &lt;/p&gt;</textarea>
                             </div>
                         </div>
                     </div>
@@ -79,6 +76,9 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="modal-footer">
+                        <button id="close_modal" class="btn btn-outline-danger">İptal</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,6 +94,9 @@
                     let url = item.target.getAttribute('src');
                     $('#service_image_input').attr("value", id);
                     $('#selected_image').attr('src', url);
+                    $('.modal').hide();
+                });
+                $('#close_modal').click(() => {
                     $('.modal').hide();
                 });
             });

@@ -13,7 +13,7 @@ class ServiceController extends Controller
 {
     public function index ()
     {
-        $services = DB::table('services')->join('gallery', 'services.service_image', '=', 'gallery.id')->select('services.*', 'gallery.media_url')->get();
+        $services = DB::table('services')->leftJoin('gallery', 'services.service_image', '=', 'gallery.id')->select('services.*', 'gallery.media_url')->get();
         $title = "Hizmetler";
         $sub_title = "";
         return view('admin.services.service', compact(["title", "sub_title", "services"]));

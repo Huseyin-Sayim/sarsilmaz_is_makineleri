@@ -17,4 +17,9 @@ class Gallery extends Model
     {
         return $this->belongsTo(Service::class, "service_image");
     }
+
+    public function slider()
+    {
+        return $this->belongsTo(Slider::class, "slider_image");
+    }
 }

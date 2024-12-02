@@ -22,6 +22,11 @@
     <script src="{{ asset("admin/js/vendor/notifications/bootbox.min.js") }}"></script>
     <!-- /core JS files -->
 
+    <!-- Ck Editor -->
+    <script src="{{ asset("admin/js/vendor/editors/ckeditor/ckeditor_classic.js") }}"></script>
+    <script src="{{ asset("admin/demo/pages/editor_ckeditor_classic.js") }}"></script>
+    <!-- /Ck Editor -->
+
     <!-- Theme JS files -->
     <script src="{{ asset('admin/js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/js/vendor/media/glightbox.min.js') }}"></script>

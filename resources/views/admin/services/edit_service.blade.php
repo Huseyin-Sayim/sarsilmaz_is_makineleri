@@ -39,10 +39,7 @@
                         <label class="col-form-label col-lg-3">Hizmet Açıklaması</label>
                         <div class="col-lg-9">
                             <div class="input-group">
-                                <span class="input-group-text  bg-input">
-                                    <i class="ph ph-text-aa"></i>
-                                </span>
-                                <textarea class="form-control" name="service_description" placeholder="Hizmet Açıklaması Giriniz" required>{{ $service->service_description }}</textarea>
+                                <textarea class="form-control" id="ckeditor_classic_prefilled" name="service_description" placeholder="Hizmet Açıklaması Giriniz" required>{{ $service->service_description }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -57,11 +54,15 @@
                                 <input type="text" class="d-none" id="service_image_input" name="service_image" value="{{ $service->service_image }}">
                                 <input type="button" id="image_select" class="btn btn-outline-secondary" value="Fotoğraf Seç">
                             </div>
-                            <img src="{{ asset($image[0]->media_url) }}" class="my-2 rounded w-50" id="selected_image">
+                            @if(empty($image[0]))
+                                <img src="" class="my-2 rounded w-50" id="selected_image">
+                            @else
+                                <img src="{{ asset($image[0]->media_url) }}" class="my-2 rounded w-50" id="selected_image">
+                            @endif
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg float-end">Ekle</button>
+                    <button type="submit" class="btn btn-primary btn-lg float-end">Güncelle</button>
                 </form>
             </div>
         </div>
@@ -79,6 +80,9 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="modal-footer">
+                        <button id="close_modal" class="btn btn-outline-danger">İptal</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,6 +98,9 @@
                     let url = item.target.getAttribute('src');
                     $('#service_image_input').attr("value", id);
                     $('#selected_image').attr('src', url);
+                    $('.modal').hide();
+                });
+                $('#close_modal').click(() => {
                     $('.modal').hide();
                 });
             });

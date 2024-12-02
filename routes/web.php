@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\ServiceController;
+use App\Http\Controllers\admin\SliderController;
+use App\Http\Controllers\admin\SettingsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,6 +41,21 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
         Route::get("/edit/{id}", [ServiceController::class, "edit"])->name("service.edit");
         Route::post("/edit/{id}", [ServiceController::class, "update"])->name("service.update");
         Route::get("/delete/{id}", [ServiceController::class, "delete"])->name("service.delete");
+    });
+
+    Route::prefix("slider")->group(function () {
+        Route::get("/", [SliderController::class, "index"])->name("slider");
+        Route::get("/create", [SliderController::class, "create"])->name("slider.create");
+        Route::post("/create", [SliderController::class, "store"])->name("slider.store");
+        Route::get("/edit/{id}", [SliderController::class, "edit"])->name("slider.edit");
+        Route::post("/edit/{id}", [SliderController::class, "update"])->name("slider.update");
+        Route::get("/delete/{id}", [SliderController::class, "delete"])->name("slider.delete");
+    });
+
+    Route::prefix("settings")->group(function () {
+        Route::get("/", [SettingsController::class, "index"])->name("settings");
+        Route::get("/edit/{id}", [SettingsController::class, "edit"])->name("settings.edit");
+        Route::post("/edit&/{id}", [SettingsController::class, "update"])->name("settings.update");
     });
 });
 

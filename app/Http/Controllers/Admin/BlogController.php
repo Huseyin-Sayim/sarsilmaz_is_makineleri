@@ -13,7 +13,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = DB::table('blog')->join('gallery', 'blog.blog_image', '=', 'gallery.id')->select('blog.*', 'gallery.media_url')->get();
+        $blogs = DB::table('blog')->leftJoin('gallery', 'blog.blog_image', '=', 'gallery.id')->select('blog.*', 'gallery.media_url')->get();
         $title = "Blog";
         $sub_title = "";
         return view("admin.blog.blog", compact(["title", "sub_title", "blogs"]));
@@ -50,10 +50,6 @@ class BlogController extends Controller
         $title = "Blog";
         $sub_title = 'Güncelle';
         return view('admin.blog.edit_blog', compact(['gallery', 'blog', 'title', 'sub_title', 'gallery_all']));
-//        return [
-//            $gallery,
-//            $blog,
-//        ];
     }
 
     public function update(Request $request, $id)
