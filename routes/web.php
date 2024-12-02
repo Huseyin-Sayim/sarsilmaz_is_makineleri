@@ -7,10 +7,9 @@ use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\SettingsController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [HomeController::class, "index"])->name("home");
 
 Auth::routes();
 
