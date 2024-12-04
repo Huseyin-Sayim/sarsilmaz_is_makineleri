@@ -30,7 +30,7 @@
                         </a>
                     </td>
                     <td>{{ $item->blog_title }}</td>
-                    <td>{{ $item->blog_text }}</td>
+                    <td>{{ substr($item->blog_text, 0, 60) }}</td>
                     <td></td>
                     <td></td>
                     <td class="text-center">

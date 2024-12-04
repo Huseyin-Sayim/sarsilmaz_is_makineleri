@@ -30,7 +30,7 @@
                         <span class="input-group-text text-primary">
                             <i class="ph ph-lock-key"></i>
                         </span>
-                                <input type="text" name="settings_key" class="form-control" value="{{ $settings->key }}" placeholder="Giriniz" required>
+                                <input type="text" name="settings_key" disabled class="form-control" value="{{ $settings->key }}" >
                             </div>
                         </div>
                     </div>

@@ -927,7 +927,9 @@ span.counter-text {
 ======================================================**/
 
 .service-top-section {
-    background: url(../images/resource/service-bg.jpg);
+    /*background: url(../images/srslmz/hizmetler.jpg);*/
+    background-color: #052361;
+    background-position: left;
     padding: 88px 0 0px;
     height: 545px;
 }
@@ -1900,7 +1902,8 @@ img.dots {
 ======================================================**/
 
 .process-section {
-    background: url(../images/resource/process-bg.jpg);
+    /*background: url(../images/resource/process-bg.jpg);*/
+    background-color: #052361;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2410,11 +2413,11 @@ h2.widget-title {
 /* Breatcam style two
 =========================*/
 .breatcam-section {
-    background: url(../images/resource/breatcam-bg2.jpg);
+    background: url(../images/srslmz/IMG-20240517-WA0066.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 415px;
+    height: 450px;
 }
 
 .breatcam-content h1 {

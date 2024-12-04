@@ -17,7 +17,7 @@
                     <th>{{ $item->id }}</th>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->key }}</td>
-                    <td>{{ $item->value }}</td>
+                    <td>{{ substr($item->value, 0, 60 )}}</td>
                     <td>
                         <a href="{{ route("settings.edit", [$item->id]) }}" class="btn btn-secondary">
                             <i class="ph ph-pencil"></i>

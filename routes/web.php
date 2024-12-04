@@ -8,8 +8,16 @@ use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\SettingsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController as FrontBlogController;
+use App\Http\Controllers\ServiceController as FrontServiceController;
 
-Route::get("/", [HomeController::class, "index"])->name("home");
+Route::get("/", [MainController::class, "index"])->name("main");
+Route::get("/about", [AboutController::class, "index"])->name("about");
+Route::get("/blogs", [FrontBlogController::class, "index"])->name("blogs");
+Route::get("/blogs/detail/{id}", [FrontBlogController::class, "details"])->name("blogs.detail");
+Route::get("/services", [FrontServiceController::class, "index"])->name("services");
 
 Auth::routes();
 
@@ -61,7 +69,7 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
 //<<<<<<< HEAD
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //=======
 
 

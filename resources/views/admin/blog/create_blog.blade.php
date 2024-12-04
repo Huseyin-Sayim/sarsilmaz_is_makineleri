@@ -39,7 +39,7 @@
                                                 <span class="input-group-text bg-input text-primary">
                                                     <i class="ph ph-image"></i>
                                                 </span>
-                                <input type="text" class="d-none" id="blog_image_input" name="blog_media">
+                                <input type="text" required class="d-none" id="blog_image_input" name="blog_media">
 {{--                            <input type="file" name="blog_image" class="form-control" placeholder="Fotoğraf Yükleyin" required>--}}
                                 <input type="button" id="image_select" class="btn btn-outline-secondary" value="Fotoğraf Seç">
                             </div>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg float-end">Ekle</button>
+                    <button type="submit" class="btn btn-primary btn-lg float-end submit_btn">Ekle</button>
                 </form>
             </div>
         </div>
@@ -90,6 +90,17 @@
                 $('#close_modal').click(() => {
                     $('.modal').hide();
                 });
+            });
+
+            $('.submit_btn').click((e) => {
+                if($('#blog_image_input').val() == "") {
+                    e.preventDefault();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "info",
+                        title: "Fotoğraf Eklemediniz",
+                    });
+                }
             });
         </script>
     </div>

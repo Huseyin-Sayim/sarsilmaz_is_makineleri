@@ -30,8 +30,8 @@
                         </a>
                     </td>
                     <td>{{ $item->service_title }}</td>
-                    <td>{{ $item->service_intro_text }}</td>
-                    <td>{{ $item->service_description }}</td>
+                    <td>{{ substr($item->service_intro_text, 0, 50) }}</td>
+                    <td>{{ substr($item->service_description, 0, 60 )}}</td>
                     <td></td>
                     <td class="text-center">
                         <div class="d-inline-flex">

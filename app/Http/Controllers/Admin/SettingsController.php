@@ -30,7 +30,6 @@ class SettingsController extends Controller
     {
         $settings = Settings::query()->findOrFail($id);
         $settings->name = $request->settings_name;
-        $settings->key = $request->settings_key;
         $settings->value = $request->settings_value;
 
         if ($settings->update()) {

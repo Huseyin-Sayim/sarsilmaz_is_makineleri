@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg float-end">Ekle</button>
+                <button type="submit" class="btn btn-primary btn-lg float-end submit_btn">Ekle</button>
             </form>
         </div>
     </div>
@@ -103,6 +103,17 @@
             $('#close_modal').click(() => {
                 $('.modal').hide();
             });
+        });
+
+        $('.submit_btn').click((e) => {
+            if($('#slider_image_input').val() == "") {
+                e.preventDefault();
+                Swal.fire({
+                    position: "top-end",
+                    icon: "info",
+                    title: "Fotoğraf Eklemediniz",
+                });
+            }
         });
     </script>
 </div>

@@ -2,51 +2,47 @@
 <!-- Start Hendre Footer Section  -->
 <!--==================================================-->
 
-<div class="footer-section py-3">
+<div class="footer-section py-5">
     <div class="container">
         <div class="row footer-bg">
             <div class="col-lg-3 col-md-6">
                 <div class="widget widgets-company-info">
                     <div class="dreamhub-logo">
                         <a class="logo_thumb" href="index.html" title="dreamhub">
-                            <img src="assets/images/logo.png" alt="" />
+                            <img class="img-fluid" src="{{ asset('admin/images/logo_sarsilmaz.png') }}" alt="" />
                         </a>
                     </div>
                     <div class="company-info-desc">
-                        <p> Professionally develop long-term performance based architectures metrics rather than </p>
+                       <p>
+                           İş makineleriniz için güvenilir çözümler sunuyoruz. Tamir, bakım, onarım, yedek parça temini, hidrolik sistem onarımı ve forklift kiralama hizmetlerimizle her zaman yanınızdayız.
+                       </p>
                     </div>
                     <div class="follow-company-icon">
-                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                        <a href="#"> <i class="fab fa-twitter"> </i> </a>
-                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
-                        <a href="#"> <i class="fab fa-pinterest-p"></i> </a>
+                        <span class="d-block text-light mb-1"> <i class="fas fa-phone-square-alt fs-5"></i> +90 537 528 72 68 </span>
+                        <span class="d-block text-light"> <i class="fas fa-phone-square-alt fs-5"></i> +90 536 061 96 93 </span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 pl-40">
                 <div class="widget widget-nav-menu">
-                    <h4 class="widget-title">Popular Services</h4>
+                    <h4 class="widget-title">Hizmetlerimiz</h4>
                     <div class="menu-quick-link-content">
                         <ul class="footer-menu">
-                            <li><a href="#"> Kitchen Cleaning </a></li>
-                            <li><a href="#"> Carpet Clean </a></li>
-                            <li><a href="#"> House Cleaning </a></li>
-                            <li><a href="#"> Office Cleaning </a></li>
-                            <li><a href="#"> Floor Cleaning </a></li>
+                            @foreach($services as $item)
+                                <li><a href="#"> {{ $item->service_title }} </a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="widget widget-nav-menu">
-                    <h4 class="widget-title"> Useful Links </h4>
+                    <h4 class="widget-title"> Sayfalar </h4>
                     <div class="menu-quick-link-content">
                         <ul class="footer-menu">
-                            <li><a href="#"> About Us </a></li>
-                            <li><a href="#"> Contact Us </a></li>
-                            <li><a href="#"> Testimonial </a></li>
-                            <li><a href="#"> Appoinment </a></li>
-                            <li><a href="#"> FAQ’s </a></li>
+                            <li><a href="{{ route("about") }}"> Hakkımızda </a></li>
+                            <li><a href="{{ route("blogs") }}"> Blog </a></li>
+                            <li><a href="#"> İletişim </a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +50,7 @@
             <div class="col-lg-3 col-md-6 pr-0">
                 <div class="menu-quick-link-contact">
                     <!-- widget title -->
-                    <h4 class="widget-title"> Working Hours </h4>
+                    <h4 class="widget-title"> Çalışma Saatleri </h4>
                     <!-- company contact info -->
                     <div class="company-work-hour">
                         <ul>

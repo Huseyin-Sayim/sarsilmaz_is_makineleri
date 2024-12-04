@@ -35,36 +35,22 @@
         <div class="row align-items-center">
             <div class="col-lg-2">
                 <div class="logo">
-                    <a class="logo_img" href="{{ route("home") }}" title="hendre">
-{{--                        <img src="{{ asset('admin/images/logo_sarsilmaz.png') }}" alt="logo">--}}
+                    <a class="logo_img" href="{{ route("main") }}" title="hendre">
+                        <img class="img-fluid" src="{{ asset('admin/images/logo_sarsilmaz.png') }}" alt="" />
                     </a>
-                    <a class="main_sticky" href="index.html" title="hendre">
-{{--                        <img src="assets/images/logo.png" alt="logo">--}}
+                    <a class="main_sticky" href="{{ route('main') }}" title="hendre">
+                        <img class="img-fluid" src="{{ asset('admin/images/logo_sarsilmaz.png') }}" alt="" />
                     </a>
                 </div>
             </div>
             <div class="col-lg-10">
                 <nav class="hendre_menu">
                     <ul class="nav_scroll">
-                        <li><a href="#">Anasayfa</a></li>
+                        <li><a href="{{ route('main') }}">Anasayfa</a></li>
 
-                        <li><a href="about.html">Hakkımızda</a></li>
-                        <li><a href="#">Shop <span><i class="fas fa-chevron-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="shop.html">Shop One</a></li>
-                                <li><a href="shop-2.html">Shop Two</a></li>
-                                <li><a href="shop-details.html">Shop Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Blog <span><i class="fas fa-chevron-down"></i></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="blog-grid.html">Blog Gird</a></li>
-                                <li><a href="blog.html">Blog List</a></li>
-                                <li><a href="blog-2column.html">Blog-2Column</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="{{ route("about") }}">Hakkımızda</a></li>
+                        <li><a href="{{ route('blogs') }}">Blog </a></li>
+                        <li><a href="{{ route("services") }}">Hizmetlerimiz</a></li>
                     </ul>
                     <div class="header-menu-right-btn">
                         <!--header-search-->

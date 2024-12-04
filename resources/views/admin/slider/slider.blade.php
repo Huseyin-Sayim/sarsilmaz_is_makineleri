@@ -30,7 +30,7 @@
                         </a>
                     </td>
                     <td>{{ $item->slider_title }}</td>
-                    <td>{{ $item->slider_description }}</td>
+                    <td>{{ substr($item->slider_description, 0, 60) }}</td>
                     <td>{{ $item->slider_button }}</td>
                     <td></td>
                     <td class="text-center">

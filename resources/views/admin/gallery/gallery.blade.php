@@ -35,7 +35,7 @@
                                     </a>
                                 </td>
                                 <td>{{ $image->media_title }}</td>
-                                <td>{{ $image->media_description }}</td>
+                                <td>{{ substr($image->media_description, 0, 50) }}</td>
                                 <td>{{ $image->media_type }}</td>
                                 <td>
                                     @if($image->media_status == 1)

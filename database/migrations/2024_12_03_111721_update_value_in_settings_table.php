@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->integer("service_image")->nullable()->change();
+        Schema::table('settings', function (Blueprint $table) {
+            $table->text("value")->change();
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->integer("service_image")->nullable(false)->change();
+        Schema::table('settings', function (Blueprint $table) {
+            $table->text("value")->change();
         });
     }
 };
