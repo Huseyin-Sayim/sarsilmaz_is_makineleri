@@ -29,7 +29,7 @@
                     <div class="menu-quick-link-content">
                         <ul class="footer-menu">
                             @foreach($services as $item)
-                                <li><a href="#"> {{ $item->service_title }} </a></li>
+                                <li><a href="{{ route('services.details', [$item->id]) }}"> {{ $item->service_title }} </a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -42,6 +42,7 @@
                         <ul class="footer-menu">
                             <li><a href="{{ route("about") }}"> Hakkımızda </a></li>
                             <li><a href="{{ route("blogs") }}"> Blog </a></li>
+                            <li><a href="{{ route("front.gallery") }}"> Blog </a></li>
                             <li><a href="#"> İletişim </a></li>
                         </ul>
                     </div>

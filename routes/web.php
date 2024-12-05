@@ -12,12 +12,15 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController as FrontBlogController;
 use App\Http\Controllers\ServiceController as FrontServiceController;
+use App\Http\Controllers\GalleryController as FrontGalleryController;
 
 Route::get("/", [MainController::class, "index"])->name("main");
 Route::get("/about", [AboutController::class, "index"])->name("about");
 Route::get("/blogs", [FrontBlogController::class, "index"])->name("blogs");
 Route::get("/blogs/detail/{id}", [FrontBlogController::class, "details"])->name("blogs.detail");
 Route::get("/services", [FrontServiceController::class, "index"])->name("services");
+Route::get("/service/details/{id}", [FrontServiceController::class, "details"])->name("services.details");
+Route::get('/front/gallery', [FrontGalleryController::class, "index"])->name("front.gallery");
 
 Auth::routes();
 

@@ -33,7 +33,7 @@
                                 </div>
                                 <h3 class="service-title">{{ $item->service_title }}</h3>
                                 <p class="service-desc">{{ $item->service_intro_text }}</p>
-                                <a class="hendre-button" href="service-details.html">Daha Fazla <i class="bi bi-plus"></i></a>
+                                <a class="hendre-button" href="{{ route("services.details", [$item->id]) }}">Daha Fazla <i class="bi bi-plus"></i></a>
                             </div>
                         </div>
                     </div>

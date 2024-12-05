@@ -51,13 +51,10 @@
                         <li><a href="{{ route("about") }}">Hakkımızda</a></li>
                         <li><a href="{{ route('blogs') }}">Blog </a></li>
                         <li><a href="{{ route("services") }}">Hizmetlerimiz</a></li>
+                        <li><a href="{{ route('front.gallery') }}">Galeri</a></li>
+                        <li><a href="">İletişim</a></li>
                     </ul>
                     <div class="header-menu-right-btn">
-                        <!--header-search-->
-                        <div class="header-search-button search-box-outer">
-                            <a href="#"><i class="fas fa-search"></i></a>
-                        </div>
-                        <!-- header button -->
                         <div class="header-button">
                             <a href="contact.html">Teklif Al</a>
                         </div>
