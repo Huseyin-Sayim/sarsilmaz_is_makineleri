@@ -42,8 +42,9 @@
                             <img src="assets/images/resource/icon.png" alt="">
                         </div>
                         <div class="feature-contact">
-                            <h2 class="feature-phone-number">+90 537 528 72 68</h2>
-                            <h2 class="feature-phone-number">+90 536 061 96 93</h2>
+                            @foreach($phone as $item)
+                                <h2 class="feature-phone-number">{{ $item->value }}</h2>
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController as FrontBlogController;
 use App\Http\Controllers\ServiceController as FrontServiceController;
 use App\Http\Controllers\GalleryController as FrontGalleryController;
+use App\Http\Controllers\ContactController;
 
 Route::get("/", [MainController::class, "index"])->name("main");
 Route::get("/about", [AboutController::class, "index"])->name("about");
@@ -21,6 +22,7 @@ Route::get("/blogs/detail/{id}", [FrontBlogController::class, "details"])->name(
 Route::get("/services", [FrontServiceController::class, "index"])->name("services");
 Route::get("/service/details/{id}", [FrontServiceController::class, "details"])->name("services.details");
 Route::get('/front/gallery', [FrontGalleryController::class, "index"])->name("front.gallery");
+Route::get('/contact', [ContactController::class, "index"])->name("contact");
 
 Auth::routes();
 

@@ -18,8 +18,9 @@
                        </p>
                     </div>
                     <div class="follow-company-icon">
-                        <span class="d-block text-light mb-1"> <i class="fas fa-phone-square-alt fs-5"></i> +90 537 528 72 68 </span>
-                        <span class="d-block text-light"> <i class="fas fa-phone-square-alt fs-5"></i> +90 536 061 96 93 </span>
+                        @foreach($phone as $item)
+                            <span class="d-block text-light mb-1"> <i class="fas fa-phone-square-alt fs-5"></i> {{ $item->value }} </span>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -43,7 +44,7 @@
                             <li><a href="{{ route("about") }}"> Hakkımızda </a></li>
                             <li><a href="{{ route("blogs") }}"> Blog </a></li>
                             <li><a href="{{ route("front.gallery") }}"> Blog </a></li>
-                            <li><a href="#"> İletişim </a></li>
+                            <li><a href="{{ route("contact") }}"> İletişim </a></li>
                         </ul>
                     </div>
                 </div>

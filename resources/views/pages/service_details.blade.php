@@ -39,7 +39,7 @@
 				<div class="col-lg-9 col-md-12">
 					<div class="service-dtls-all-items">
 						<div class="service-thumb">
-							<img style="width: 100%; height: 400px; object-fit: cover" src="{{ asset($image[0]->media_url) }}" alt="">
+							<img style="width: 100%; height: 400px; object-fit: contain;" src="{{ asset($image[0]->media_url) }}" alt="">
 						</div>
 						<div class="service-dtls-content">
 							<h2 class="service-title">{{ $service->service_title }}</h2>

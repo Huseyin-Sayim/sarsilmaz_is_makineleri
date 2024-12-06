@@ -15,7 +15,8 @@ class MainController extends Controller
         $blogs = DB::table("blog")->leftJoin("gallery", "blog.blog_image", "=", "gallery.id")->select("blog.*", "gallery.media_url")->limit(3)->get();
         $services = DB::table("services")->leftJoin("gallery", "services.service_image", "=", "gallery.id")->select("services.*", "gallery.media_url")->get();
         $about = Settings::query()->where("key", "=", "about")->get();
+        $phone = Settings::query()->where("key", "=", "phone")->get();
         $why_choose = Settings::query()->where("key", "=", "why_choose_us")->get();
-        return view("index", compact(["blogs", "about", "services", "why_choose"]));
+        return view("index", compact(["blogs", "about", "services", "why_choose", 'phone']));
     }
 }

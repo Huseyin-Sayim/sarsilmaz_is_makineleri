@@ -6,14 +6,18 @@
         <div class="row align-items-center d-flex">
             <div class="col-lg-6">
                 <div class="header-address-info">
-                    <p> <i class="bi bi-geo-alt"></i> 102/B New Market, Sandigo-USA <span> <i class="bi bi-envelope-open"></i> example@gmail.com </span></p>
+                    <p> <i class="bi bi-geo-alt"></i> 102/B New Market, Sandigo-USA </p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="header-top-right text-right">
 
                     <div class="phone-number">
-                        <p> <i class="fas fa-phone-square-alt"></i> <span>Telefon :</span> +980 234 4567 </p>
+                        <p>
+                            @foreach($phone as $item)
+                                <i class="fas fa-phone-square-alt"></i>  {{ $item->value }} &nbsp &nbsp
+                            @endforeach
+                        </p>
                     </div>
                 </div>
             </div>
@@ -52,13 +56,8 @@
                         <li><a href="{{ route('blogs') }}">Blog </a></li>
                         <li><a href="{{ route("services") }}">Hizmetlerimiz</a></li>
                         <li><a href="{{ route('front.gallery') }}">Galeri</a></li>
-                        <li><a href="">İletişim</a></li>
+                        <li><a href="{{ route("contact") }}">İletişim</a></li>
                     </ul>
-                    <div class="header-menu-right-btn">
-                        <div class="header-button">
-                            <a href="contact.html">Teklif Al</a>
-                        </div>
-                    </div>
                 </nav>
             </div>
         </div>
