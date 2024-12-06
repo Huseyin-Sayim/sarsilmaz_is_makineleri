@@ -17,6 +17,7 @@ class MainController extends Controller
         $about = Settings::query()->where("key", "=", "about")->get();
         $phone = Settings::query()->where("key", "=", "phone")->get();
         $why_choose = Settings::query()->where("key", "=", "why_choose_us")->get();
-        return view("index", compact(["blogs", "about", "services", "why_choose", 'phone']));
+        $address = Settings::query()->where("key", "=", "address")->get();
+        return view("index", compact(["blogs", "about", "services", "why_choose", 'phone', 'address']));
     }
 }

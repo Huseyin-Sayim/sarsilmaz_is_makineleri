@@ -13,7 +13,8 @@ class ContactController extends Controller
     {
         $maps = Settings::query()->where("key", "=", "maps")->get();
         $phone = Settings::query()->where("key", "=", "phone")->get();
+        $address = Settings::query()->where("key", "=", "address")->get();
         $services = DB::table("services")->leftJoin("gallery", "services.service_image", "=", "gallery.id")->select("services.*", "gallery.media_url")->get();
-        return view("pages.contact", compact(['services', 'maps', 'phone']));
+        return view("pages.contact", compact(['services', 'maps', 'phone', "address"]));
     }
 }

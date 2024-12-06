@@ -52,6 +52,11 @@ Periyodik bakım ve esnek forklift kiralama seçeneklerimizle makinelerinizin ve
                 "key" => "phone",
                 "value" => "0536 061 9693"
             ],
+            [
+                "name" => "Adres",
+                "key" => "address",
+                "value" => "Akhisar/Manisa"
+            ]
 
         ]);
     }

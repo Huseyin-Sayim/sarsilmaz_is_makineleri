@@ -12,8 +12,9 @@ class AboutController extends Controller
     public function index()
     {
         $phone = Settings::query()->where("key", "=", "phone")->get();
+        $address = Settings::query()->where("key", "=", "address")->get();
         $services = Service::query()->get();
         $about = Settings::query()->where("key", "=", "about")->get();
-        return view("pages.about", compact(["services", "about", "phone"]));
+        return view("pages.about", compact(["services", "about", "phone", "address"]));
     }
 }

@@ -14,6 +14,7 @@ use App\Http\Controllers\BlogController as FrontBlogController;
 use App\Http\Controllers\ServiceController as FrontServiceController;
 use App\Http\Controllers\GalleryController as FrontGalleryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\admin\ProfileController;
 
 Route::get("/", [MainController::class, "index"])->name("main");
 Route::get("/about", [AboutController::class, "index"])->name("about");
@@ -68,6 +69,12 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
         Route::get("/", [SettingsController::class, "index"])->name("settings");
         Route::get("/edit/{id}", [SettingsController::class, "edit"])->name("settings.edit");
         Route::post("/edit&/{id}", [SettingsController::class, "update"])->name("settings.update");
+    });
+
+    Route::prefix("profile")->group(function () {
+        Route::get('/', [ProfileController::class, "index"])->name("profile");
+        Route::get('/edit', [ProfileController::class, "edit"])->name("profile.edit");
+        Route::post('/edit', [ProfileController::class, "update"])->name("profile.update");
     });
 });
 

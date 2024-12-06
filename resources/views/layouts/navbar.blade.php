@@ -6,7 +6,7 @@
         <div class="row align-items-center d-flex">
             <div class="col-lg-6">
                 <div class="header-address-info">
-                    <p> <i class="bi bi-geo-alt"></i> 102/B New Market, Sandigo-USA </p>
+                    <p> <i class="bi bi-geo-alt"></i> {{ $address[0]->value }} </p>
                 </div>
             </div>
             <div class="col-lg-6">

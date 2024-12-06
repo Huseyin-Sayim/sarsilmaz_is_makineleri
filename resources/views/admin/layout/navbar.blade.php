@@ -44,9 +44,9 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a href="#" class="dropdown-item">
+                    <a href="{{ route("profile") }}" class="dropdown-item">
                         <i class="ph-user-circle me-2"></i>
-                        My profile
+                        Profil
                     </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
