@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hendre - Repair Service HTML5 Template</title>
+    <title>Sarsılmaz İş Makineleri</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('assets/images/fav-icon/icon.png') }}">
+    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('admin/images/logo_sarsilmaz.png') }}">
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css" media="all">
     <!-- carousel CSS -->
