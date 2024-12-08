@@ -34,12 +34,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="hendre-section-title padding-lg">
-                        <h1>Contact <span>Form</span></h1>
-                    </div>
+                     {{--   <div class="hendre-section-title padding-lg">
+                            <h1>İletişim <span>Form</span></h1>
+                        </div>--}}
                 </div>
             </div>
-            <div class="row">
+          {{--  <div class="row">
                 <div class="col-lg-12">
                     <div class="contact_from_box">
                         <form id="contact_form" action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form" >
@@ -81,7 +81,7 @@
                         <div id="status"></div>
                     </div>
                 </div>
-            </div>
+            </div>--}}
         </div>
     </div>
     <!-- /Contact Form -->

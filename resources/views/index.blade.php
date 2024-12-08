@@ -55,7 +55,7 @@
                                 <img style="width: 100%; height: 400px; object-fit: cover" src="{{ asset($item->media_url) }}" alt="">
                                 <div class="feature-icon">
                                     <img src="assets/images/resource/feature1.png" alt="">
-                                    <a class="feature-icon2" href="service-details.html"><i class="bi bi-arrow-right"></i></a>
+                                    <a class="feature-icon2" href="{{ route("blogs.detail", [$item->id]) }}"><i class="bi bi-arrow-right"></i></a>
                                 </div>
                                 <div class="feature-content">
                                     <h2>{{ $item->blog_title }}</h2>
@@ -128,7 +128,7 @@
                                     </div>
                                     <h3 class="service-title">{{ $item->service_title }}</h3>
                                     <p class="service-desc">{{ $item->service_intro_text }}</p>
-                                    <a class="hendre-button" href="service-details.html">Daha Fazla <i class="bi bi-plus"></i></a>
+                                    <a class="hendre-button" href="{{ route("services.details", [$item->id]) }}">Daha Fazla <i class="bi bi-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -426,9 +426,9 @@
                                 <img style="width: 100%; height: 400px; object-fit: cover" src="{{ asset($item->media_url) }}" alt="">
                             </div>
                             <div class="blog-content">
-                                <h2 class="blog-title"><a href="blog-details.html" class="fs-5">{!! $item->blog_title !!}</a></h2>
+                                <h2 class="blog-title"><a href="{{ route("blogs.detail", [$item->id]) }}" class="fs-5">{!! $item->blog_title !!}</a></h2>
                                 <div class="blog-btn">
-                                    <a href="blog-details.html">Daha Fazla <i class="bi bi-arrow-right"></i></a>
+                                    <a href="{{ route("blogs.detail", [$item->id]) }}">Daha Fazla <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

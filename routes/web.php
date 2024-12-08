@@ -3,10 +3,10 @@
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\BlogController;
-use App\Http\Controllers\admin\ServiceController;
-use App\Http\Controllers\admin\SliderController;
-use App\Http\Controllers\admin\SettingsController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AboutController;
@@ -14,7 +14,7 @@ use App\Http\Controllers\BlogController as FrontBlogController;
 use App\Http\Controllers\ServiceController as FrontServiceController;
 use App\Http\Controllers\GalleryController as FrontGalleryController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\Admin\ProfileController;
 
 Route::get("/", [MainController::class, "index"])->name("main");
 Route::get("/about", [AboutController::class, "index"])->name("about");
@@ -78,12 +78,7 @@ Route::group(["prefix" => "panel", 'middleware' => 'auth'], function () {
     });
 });
 
-//<<<<<<< HEAD
-
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//=======
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-//>>>>>>> 0e16e20bdb6186c0565783fd9be17796317ddcb8
+

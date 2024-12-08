@@ -56,10 +56,9 @@
                     <!-- company contact info -->
                     <div class="company-work-hour">
                         <ul>
-                            <li>Mon - Wed <span class="table-text">8.00 AM - 5.00 PM</span></li>
-                            <li>Thu - Fri <span>9.00 AM - 4.00 PM</span></li>
-                            <li>Saturday <span>9.00 AM - 2.00 PM</span></li>
-                            <li class="table-brb">Sunday <span>Clossed</span></li>
+                            <li>Pzrt. - Cuma <span class="table-text">8.00 - 18.00</span></li>
+                            <li>Saturday <span>9.00 - 17:00</span></li>
+                            <li class="table-brb">Pazar <span>Kapalı</span></li>
                         </ul>
                     </div>
                 </div>
@@ -74,15 +73,15 @@
             <div class="col-lg-6 col-md-6">
                 <div class="footer-bottom-content">
                     <div class="footer-bottom-content-copy">
-                        <p>Copyright © 2023 <span>Hendre</span>. All rights reserved.</p>
+                        <p>Copyright © {{date("Y")}} <span><a class="text-danger"  target="_blank" href="https://metgesoft.com">Metgesoft</a></span>. Tüm hakları saklıdır.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="footer-bottom-menu text-right">
                     <ul>
-                        <li><a href="#">Terms Condition</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                       {{-- <li><a href="#">Terms Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>--}}
                     </ul>
                 </div>
             </div>
